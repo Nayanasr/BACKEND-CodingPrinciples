@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PrinciplesOfCoding
+{
+    class Solid
+    {
+
+    }
+}
+SOLID PRINCIPLE
+S==>single responsibility principle==single class
+
+O==>Open close principle==every object or entities should be open for extensions== shold be extendable  and cant be modified.
+
+*in dependency injection we created a interface 
+ but we cant create a object of the interface
+
+ writing interface
+ public interface Iocp{
+          public void method(); 
+          public void method1(); 
+        }
+
+        if we want to use this interface method we need to create object therefore  we are doing dependency injection i.e 
+
+        public Iocp injection;
+        public ocp(Iocp injection){
+          this.injection = injection
+        }
+
+        we cant modify the dependency injection we can only do extendable
+
+L==>LISKOV==If we have parent and child class if we remove the parent class then it will never show the error
+subclasses are substitutable from base or parent class==every subclass can be substitutable from parent class.
+
+I==>Interface segregation principle==A client should never be forced to use the interface that he never 
+for ex if we want to use only 1 method from the interface then it is forcing to implement all the methods from the interface to the coder.
+to solve this we need to create separate interfaces for the methods.
+
+D==>Dependency Inversion Principle==entities must depend on abstraction not on classes.
+high level module must not depend on low level module but depend on abstraction.
